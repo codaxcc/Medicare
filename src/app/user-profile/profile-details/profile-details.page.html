@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/user-profile"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Profile Information</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleEditProfile()">Edit</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="!isEditProfile">
+    <!-- Content for non-edit mode -->
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Full Name</ion-label>
+        <ion-text>{{ fullname }}</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-text>{{ email }}</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Phone</ion-label>
+        <ion-text>{{ phone }}</ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isEditProfile">
+    <ion-card-header>
+      Edit Personal Info
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list (ngSubmit)="submitForm()">
+        <ion-item>
+          <ion-input label="Fullname" label-placement="floating" fill="outline" [(ngModel)]="fullname" ></ion-input>
+        </ion-item>
+     
+        <ion-item>
+          <ion-input label="Email" label-placement="floating" fill="outline" [(ngModel)]="email" ></ion-input>
+        </ion-item>
+
+        
+        
+        <ion-item>
+          <ion-input label="Phone" label-placement="floating" fill="outline" [(ngModel)]="phone" ></ion-input>
+        </ion-item>
+
+        <ion-button type="submit">Save</ion-button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

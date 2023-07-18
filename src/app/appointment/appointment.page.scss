@@ -1,0 +1,90 @@
+.md {
+  .popover {
+      p {
+          padding-top: 1vh;
+      }
+  }
+}
+
+ion-header {
+  background: var(--ion-color-light);
+  ion-list {
+      background: var(--ion-color-primary);
+      padding: 2vh 0 5vh 0;
+      ion-item {
+          ion-label {
+              font-weight: bold;
+              font-size: 1.6rem;
+              letter-spacing: 0.5px;
+              color: white;
+          }
+      }
+  }
+
+  .popover {
+      
+      width: 90%;
+      margin: auto;
+
+      
+      ion-item {
+          --border-radius: 20px;
+          margin-top: -9vh;
+          ion-icon {
+              font-size: 4rem;
+          }
+          ion-label {
+              margin: 3vh 0;
+              ion-text {
+                  font-size: 0.8rem;
+                  font-weight: bold;
+              }
+              p {
+                  ion-text {
+                      font-size: 2.5rem;
+                  }
+              }
+          }
+      }
+  }
+}
+
+ion-content{
+ 
+  ion-button {
+    --box-shadow: none;
+    --border-radius: 25px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.time {
+    background: #bec0c629;
+    width: 80px;
+    
+}
+
+.appointment {
+    width: 200px;
+    margin-left: -50px;;
+}
+.no-appointment-text{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:#c7c7c7;
+
+    ion-icon{
+        font-size: 6rem;
+    }
+
+    p{
+        font-size: 1.8rem;
+    }
+}
+}
+ 

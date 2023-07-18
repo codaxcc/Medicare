@@ -1,0 +1,49 @@
+<ion-header collapse="fade">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" routerLink="/home">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1 class="title">Geriatric Doctors</h1>
+  <ion-searchbar placeholder="Search" showCancelButton="focus" class="custom" (ionChange)="filterItems($event)"></ion-searchbar>
+
+  <ion-card *ngFor="let item of filteredItems" lines="none" class="ion-activatable ripple-parent">
+    <ion-ripple-effect></ion-ripple-effect>
+    <ion-card-header> 
+      <ion-item lines="none">
+        <ion-avatar slot="start">
+          <img src="{{ item.avatar }} ">
+        </ion-avatar>
+        <ion-label>
+          <h1>{{ item.name }}</h1>
+          <p>{{ item.specialty }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>  
+        <h1>Consultation Availability</h1>
+        <ion-icon color="primary" name="checkmark-circle-outline" slot="start"></ion-icon>
+        <ion-label>In-person</ion-label>
+        <ion-icon name="close-circle-outline" slot="start"></ion-icon>
+        <ion-label>Online</ion-label>
+      </ion-list>
+
+      <ion-list>  
+        <h1>Experience</h1>
+        <ion-icon name="star" slot="start"></ion-icon>
+        <ion-label>{{ item.experience }} years</ion-label>
+      </ion-list>
+      <h1>Schedule</h1>
+      <p>{{ item.schedule }}</p>
+      <p>{{ item.time }}</p>
+      <p>Fee: {{ item.fee }}</p>
+    </ion-card-content>
+    <ion-button shape="round" expand="full" [routerLink]="item.url">Book Now</ion-button>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,66 @@
+<ion-header class="ion-no-border">
+  <ion-list lines="none">
+    <ion-item color="primary">
+      <ion-label class="ion-text-center">YOUR APPOINTMENT</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-header>
+
+<ion-content>
+
+  <ion-list class="popover" *ngIf="appointments.length > 0; else noAppointment">
+  
+  </ion-list>
+
+  <ng-template #noAppointment>
+    <ion-text class="no-appointment-text" color="medium">
+      <ion-icon  name="sad-outline"></ion-icon>
+      <p>No appointment added.</p> 
+    </ion-text>
+  </ng-template>
+
+  <ion-list class="popover" *ngIf="appointments.length > 0">
+    <ion-item *ngFor="let appointment of appointments">
+      <ion-label>
+        <ion-text>{{ appointment.profileInfo.name }}</ion-text>
+        <ion-text>
+        <p>Address: {{ appointment.profileInfo.location }}</p>
+        <ion-icon name="calendar-outline" slot="start"></ion-icon>
+        </ion-text>
+        <ion-text>
+          <ion-chip color="warning">
+            <ion-icon name="calendar-outline"></ion-icon>
+            <ion-label>{{ appointment.datetime }}</ion-label>
+          </ion-chip>
+        </ion-text>
+        <br>
+        <ion-text>
+          Status
+          <ion-chip color="danger">Pending</ion-chip>
+        </ion-text>
+        <br>
+        <ion-text>
+          Total Amount:  {{ appointment.profileInfo.fee }}
+        </ion-text>
+
+      <ion-row class="rebook">
+        <ion-col size="6">
+          <ion-button class="time"(click)="deleteContent(appointment)" fill="clear">
+            <ion-icon name="trash-sharp"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-button (click)="bookAgain(appointment)" class="appointment" expand="block">
+            Book Again
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      </ion-label>
+       
+
+       
+
+    </ion-item>
+  </ion-list>
+</ion-content>

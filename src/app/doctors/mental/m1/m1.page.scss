@@ -1,0 +1,154 @@
+ion-header {
+    z-index: 0;
+}
+
+#profile-info {
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+}
+
+#profile-image {
+    display: block;
+    border-radius: 50px;
+    width: 115px;
+    height: 115px;
+    margin: 12px auto 45px;
+}
+
+#profile-description {
+    font-size: 22px;
+    color: #1b1818;
+    font-weight: 500;
+}
+
+#profile-name {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.title {
+    .sub-title {
+        margin-bottom: 12px;
+    }
+}
+
+#about-description {
+    white-space: pre-line;
+    font-size: 16px;
+    color: #44444485;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.sub-title {
+        color: #ffff;
+        font-size: 20px;
+        line-height: 41px;
+        text-align: center;
+        border-radius: 10px 10px 0 0;
+        background: #2f851d85
+        
+    }
+
+.group-actions {
+    ion-button {
+        --border-radius: 20px;
+        height: 50px;
+        margin: 10px;
+        --box-shadow: none;
+    }
+}
+ 
+.buttons{
+   margin-left:10px;
+   margin-top:-20px ;
+}
+
+.message{
+        margin-top: -10px;
+        margin-left: 19px;  
+        textarea{
+            text-indent: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+             height: 100px;
+             width: 300px;
+             
+        }        
+        h2{
+            font-weight:bold;
+        }
+        
+          
+          
+    
+}
+ 
+.consult{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.btn-time-appointment {
+    ion-button {
+        --box-shadow: none;
+        --border-radius: 25px;
+        height: 50px;
+        font-size: 18px;
+        font-weight: bold;
+      
+        margin-bottom: 30px;
+    }
+
+    .time {
+        --background: #bec0c629;
+        width: 80px;
+        
+    }
+
+    .appointment {
+        text-transform: capitalize;
+        width: 100px;
+    }
+}
+ion-card{
+    box-shadow: none;
+   
+}
+.patients_data{
+    padding: 30px;  
+    ion-item{
+        margin-bottom: 10px;
+        text-indent: 10px;
+        border: solid 2px rgb(97, 224, 72);
+    } 
+}
+.payment{
+    display: flex;
+    padding: 10px;
+    --background: rgb(97, 224, 72);
+ ion-list{
+    background: rgb(97, 224, 72);
+ }
+ ion-label{
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+ }
+ ion-icon{
+    font-size: 20px;
+    color: white;
+ }
+
+ ion-text{
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+ }
+ ion-button{
+     margin-left: 100px;
+ 
+ }
+}

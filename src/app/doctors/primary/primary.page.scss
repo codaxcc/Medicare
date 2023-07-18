@@ -1,0 +1,37 @@
+.title{
+    color:#3f7a33;
+    margin-left: 20px;
+    font-weight: bolder;
+}
+
+ion-card{
+    ion-list{
+        display: inline-block;
+        margin-right: 20px;
+    }
+    ion-avatar{
+        width: 60px;
+        height: auto;
+    }
+    ion-button{
+       margin:10px;
+        
+    }
+    h1{
+        color: black;
+        font-size: 15px;
+    }
+}
+ion-title{
+  color: #3f7a33;
+  font-weight: bolder;
+    
+}
+.header{
+    display: flex;
+}
+ion-searchbar{
+  
+    
+    --border-radius: 15px;
+}
